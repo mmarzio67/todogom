@@ -1,5 +1,6 @@
 # Build the Go API
 FROM golang:latest AS builder
+RUN mkdir /app
 ADD . /app
 WORKDIR /app/server
 RUN go mod download
